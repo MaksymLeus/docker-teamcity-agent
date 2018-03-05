@@ -1,7 +1,8 @@
 FROM java:8-jre
 MAINTAINER Alexander Gorokhov <sashgorokhov@gmail.com>
 
-RUN apt-get install -y unzip git
+RUN apt-get update && \
+    apt-get install -y unzip git
 
 ENV SERVER_URL="" \
     AGENT_OWN_ADDRESS="" \
